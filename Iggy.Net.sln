@@ -6,9 +6,20 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E31B68E8-024
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{42D93732-91A7-4623-8339-4C5B96CFD49C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iggy.Net", "src\Iggy.Net\Iggy.Net.csproj", "{3F099021-9BEF-4BFE-A003-A7AA9138F26B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3F099021-9BEF-4BFE-A003-A7AA9138F26B} = {E31B68E8-0245-451F-9EC1-9C1BAE1D1B5D}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F099021-9BEF-4BFE-A003-A7AA9138F26B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F099021-9BEF-4BFE-A003-A7AA9138F26B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F099021-9BEF-4BFE-A003-A7AA9138F26B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F099021-9BEF-4BFE-A003-A7AA9138F26B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
