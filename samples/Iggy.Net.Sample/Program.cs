@@ -16,6 +16,11 @@ builder.Services.AddIggy(options =>
 {
     options.AddStream(streamOptions =>
     {
+        streamOptions.Id = 3;
+        streamOptions.AddTopic(topicOptions =>
+        {
+
+        });
         streamOptions.AddTopic(topicOptions =>
         {
 
@@ -25,6 +30,7 @@ builder.Services.AddIggy(options =>
 
 var app = builder.Build();
 
+app.UseIggy();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

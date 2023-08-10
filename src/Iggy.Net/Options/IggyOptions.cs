@@ -18,5 +18,7 @@ public sealed class StreamOptions
 
 public sealed class TopicOptions
 {
-    
+    public int StreamId { get; set; } = 1;
+    public string Name { get; set; } = "topic";
+    public int TopicId { get; set; } = 1;
 }

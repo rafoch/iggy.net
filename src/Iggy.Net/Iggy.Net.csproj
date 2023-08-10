@@ -8,13 +8,14 @@
 
     <ItemGroup>
       <Folder Include="Consumer\" />
-      <Folder Include="Topic\" />
     </ItemGroup>
 
     <ItemGroup>
       <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
       <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
       <PackageReference Include="Microsoft.Extensions.Options" Version="7.0.0" />
+      <PackageReference Include="Microsoft.AspNetCore.App" Version="7.0.0" />
     </ItemGroup>
+
 
 </Project>
