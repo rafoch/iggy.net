@@ -27,3 +27,10 @@ public enum MessagePolling
     Last,
     Next
 }
+
+public enum PartitioningKind
+{
+    Balanced,
+    PartitionId,
+    MessageKey
+}

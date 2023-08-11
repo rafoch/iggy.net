@@ -8,6 +8,7 @@
 
     <ItemGroup>
       <Folder Include="Consumer\" />
+      <Folder Include="Processor\" />
     </ItemGroup>
 
     <ItemGroup>

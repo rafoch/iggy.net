@@ -24,6 +24,8 @@ public static class IggyBuilderExtensions
 
             client.BaseAddress = new Uri(options.BaseAdress);
         });
+
+        services.AddHostedService<BackgroundServiceT>();
         return services;
     }
 
@@ -44,7 +46,7 @@ public static class IggyBuilderExtensions
                 Task.Run(async () => memoryStream.CreateStreamAsync(new StreamRequest()
                 {
                     Name = opt.Name,
-                    StreamId = opt.Id
+                    StreamId = opt.StreamId
                 })));
 
             Task.WhenAll(streamTasks);
@@ -54,12 +56,12 @@ public static class IggyBuilderExtensions
                 {
                     Name = opt.Name,
                     TopicId = opt.TopicId,
-                    PartitionsCount = 1,
+                    PartitionsCount = opt.PartitionsCount,
                 })));
 
             Task.WhenAll(topicTasks);
         }
-
+        
         return app;
     }
 }
@@ -70,7 +72,7 @@ public static class IggyOptionsExtensions
     {
         var options = new StreamOptions()
         {
-            Id = StreamRegistrar.Options.Count,
+            StreamId = StreamRegistrar.Options.Count,
             Name = $"stream-{StreamRegistrar.Options.Count}"
         };
         streamOptions.Invoke(options);
